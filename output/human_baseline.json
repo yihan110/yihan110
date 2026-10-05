@@ -1,0 +1,24 @@
+{
+  "n": 23,
+  "模块A": {
+    "n": 16,
+    "accuracy": 1.0,
+    "avg_confidence": 0.911,
+    "ece": 0.089,
+    "brier": 0.011,
+    "overconfidence": 0.0,
+    "auc_known": 0.5
+  },
+  "模块B": {
+    "n": 7,
+    "rejection_rate": 1.0,
+    "hallucination_rate": 0.0,
+    "accuracy_on_unknown": 1.0
+  },
+  "MetaScore": {
+    "MetaScore": 97.0,
+    "校准得分": 38.0,
+    "未知识别得分": 40.0,
+    "自我监控得分": 19.0
+  }
+}

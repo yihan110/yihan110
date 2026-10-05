@@ -3,36 +3,36 @@
   "label": "演示模型②：过自信+幻觉（不知道也强行猜）",
   "summary": {
     "模块A_知识校准": {
-      "n": 30,
-      "accuracy": 0.5666666666666667,
-      "avg_confidence": 0.9173333333333333,
-      "ece": 0.3506666666666666,
-      "mce": 0.4895,
-      "brier": 0.37822,
-      "overconfidence": 0.3506666666666666,
-      "auc_known": 0.3778280542986425
+      "n": 40,
+      "accuracy": 0.6,
+      "avg_confidence": 0.9225,
+      "ece": 0.32249999999999995,
+      "mce": 0.44321428571428567,
+      "brier": 0.35296,
+      "overconfidence": 0.32249999999999995,
+      "auc_known": 0.39453125
     },
     "模块B_未知识别": {
-      "n_unknown": 11,
-      "hallucination_rate": 0.9090909090909091,
-      "rejection_rate": 0.09090909090909091,
-      "unknown_auc": 0.9,
-      "avg_confidence_on_unknown": 0.8654545454545454,
-      "accuracy_on_unknown": 0.09090909090909091
+      "n_unknown": 15,
+      "hallucination_rate": 0.8,
+      "rejection_rate": 0.2,
+      "unknown_auc": 0.5555555555555556,
+      "avg_confidence_on_unknown": 0.8513333333333333,
+      "accuracy_on_unknown": 0.2
     },
     "模块C_自信反思": {
-      "n": 12,
-      "predicted_correct": 12,
-      "actual_correct": 10,
-      "reflexivity_error": 0.16666666666666666,
-      "accuracy": 0.8333333333333334
+      "n": 20,
+      "predicted_correct": 20,
+      "actual_correct": 12,
+      "reflexivity_error": 0.4,
+      "accuracy": 0.6
     },
-    "校准差距_known_vs_unknown": 0.7745
+    "校准差距_known_vs_unknown": 0.6513
   },
   "MetaScore": {
-    "MetaScore": 31.7,
-    "校准得分": 11.4,
-    "未知识别得分": 3.6,
-    "自我监控得分": 16.7
+    "MetaScore": 33.6,
+    "校准得分": 13.6,
+    "未知识别得分": 8.0,
+    "自我监控得分": 12.0
   }
 }

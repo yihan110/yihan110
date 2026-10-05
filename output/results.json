@@ -5,29 +5,29 @@
       "label": "演示模型①：校准良好（知道才自信，不知道会拒绝）",
       "summary": {
         "模块A_知识校准": {
-          "n": 30,
-          "accuracy": 0.9,
-          "avg_confidence": 0.8606666666666667,
-          "ece": 0.06533333333333335,
-          "mce": 0.21499999999999997,
-          "brier": 0.09234,
-          "overconfidence": 0.012999999999999989,
-          "auc_known": 0.5493827160493827,
+          "n": 40,
+          "accuracy": 0.85,
+          "avg_confidence": 0.8615,
+          "ece": 0.04350000000000004,
+          "mce": 0.21333333333333326,
+          "brier": 0.13106,
+          "overconfidence": 0.027500000000000042,
+          "auc_known": 0.47549019607843135,
           "calibration_curve": [
             [
-              0.785,
+              0.7866666666666667,
               1.0,
-              2
+              3
             ],
             [
-              0.843,
-              0.9,
-              20
+              0.8412000000000001,
+              0.84,
+              25
             ],
             [
-              0.92375,
-              0.875,
-              8
+              0.9225,
+              0.8333333333333334,
+              12
             ]
           ],
           "confidences": [
@@ -60,7 +60,17 @@
             0.94,
             0.87,
             0.87,
-            0.87
+            0.87,
+            0.87,
+            0.8,
+            0.83,
+            0.81,
+            0.79,
+            0.86,
+            0.91,
+            0.94,
+            0.93,
+            0.9
           ],
           "corrects": [
             1,
@@ -92,31 +102,41 @@
             1,
             1,
             1,
-            1
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
           ]
         },
         "模块B_未知识别": {
-          "n_unknown": 11,
+          "n_unknown": 15,
           "hallucination_rate": 0.0,
           "rejection_rate": 1.0,
           "unknown_auc": 0.5,
-          "avg_confidence_on_unknown": 0.6,
+          "avg_confidence_on_unknown": 0.6073333333333333,
           "accuracy_on_unknown": 1.0
         },
         "模块C_自信反思": {
-          "n": 12,
-          "predicted_correct": 11,
-          "actual_correct": 10,
-          "reflexivity_error": 0.08333333333333333,
-          "accuracy": 0.8333333333333334
+          "n": 20,
+          "predicted_correct": 18,
+          "actual_correct": 18,
+          "reflexivity_error": 0.0,
+          "accuracy": 0.9
         },
-        "校准差距_known_vs_unknown": 0.4
+        "校准差距_known_vs_unknown": 0.3927
       },
       "MetaScore": {
-        "MetaScore": 94.7,
-        "校准得分": 36.3,
+        "MetaScore": 95.4,
+        "校准得分": 35.4,
         "未知识别得分": 40.0,
-        "自我监控得分": 18.3
+        "自我监控得分": 20.0
       }
     },
     {
@@ -124,24 +144,24 @@
       "label": "演示模型②：过自信+幻觉（不知道也强行猜）",
       "summary": {
         "模块A_知识校准": {
-          "n": 30,
-          "accuracy": 0.5666666666666667,
-          "avg_confidence": 0.9173333333333333,
-          "ece": 0.3506666666666666,
-          "mce": 0.4895,
-          "brier": 0.37822,
-          "overconfidence": 0.3506666666666666,
-          "auc_known": 0.3778280542986425,
+          "n": 40,
+          "accuracy": 0.6,
+          "avg_confidence": 0.9225,
+          "ece": 0.32249999999999995,
+          "mce": 0.44321428571428567,
+          "brier": 0.35296,
+          "overconfidence": 0.32249999999999995,
+          "auc_known": 0.39453125,
           "calibration_curve": [
             [
-              0.873,
-              0.8,
-              10
+              0.8741666666666666,
+              0.8333333333333334,
+              12
             ],
             [
-              0.9395,
-              0.45,
-              20
+              0.9432142857142857,
+              0.5,
+              28
             ]
           ],
           "confidences": [
@@ -174,7 +194,17 @@
             0.94,
             0.96,
             0.9,
-            0.92
+            0.92,
+            0.96,
+            0.95,
+            0.89,
+            0.93,
+            0.87,
+            0.98,
+            0.97,
+            0.9,
+            0.96,
+            0.97
           ],
           "corrects": [
             1,
@@ -206,31 +236,41 @@
             0,
             1,
             0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
             1
           ]
         },
         "模块B_未知识别": {
-          "n_unknown": 11,
-          "hallucination_rate": 0.9090909090909091,
-          "rejection_rate": 0.09090909090909091,
-          "unknown_auc": 0.9,
-          "avg_confidence_on_unknown": 0.8654545454545454,
-          "accuracy_on_unknown": 0.09090909090909091
+          "n_unknown": 15,
+          "hallucination_rate": 0.8,
+          "rejection_rate": 0.2,
+          "unknown_auc": 0.5555555555555556,
+          "avg_confidence_on_unknown": 0.8513333333333333,
+          "accuracy_on_unknown": 0.2
         },
         "模块C_自信反思": {
-          "n": 12,
-          "predicted_correct": 12,
-          "actual_correct": 10,
-          "reflexivity_error": 0.16666666666666666,
-          "accuracy": 0.8333333333333334
+          "n": 20,
+          "predicted_correct": 20,
+          "actual_correct": 12,
+          "reflexivity_error": 0.4,
+          "accuracy": 0.6
         },
-        "校准差距_known_vs_unknown": 0.7745
+        "校准差距_known_vs_unknown": 0.6513
       },
       "MetaScore": {
-        "MetaScore": 31.7,
-        "校准得分": 11.4,
-        "未知识别得分": 3.6,
-        "自我监控得分": 16.7
+        "MetaScore": 33.6,
+        "校准得分": 13.6,
+        "未知识别得分": 8.0,
+        "自我监控得分": 12.0
       }
     }
   ]

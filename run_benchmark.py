@@ -23,10 +23,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from metascope import generator
 from metascope import runner
+from metascope import visualize
 from metascope.clients import DemoModel, APIModel
 
 
-def build_report(model_results, calib_data):
+def build_report(model_results, calib_data, svg_files):
     """生成人类可读的 Markdown 报告。"""
     lines = ["# MetaScope 评测报告（Markdown）", ""]
     for r in model_results:
@@ -55,6 +56,11 @@ def build_report(model_results, calib_data):
         lines.append("")
         lines.append("### 校准曲线（A 模块，分箱 置信度 vs 准确率）")
         lines.append("")
+        img = svg_files.get(r["name"])
+        if img:
+            name = r["name"]
+            lines.append(f"![校准曲线 {name}]({img})")
+            lines.append("")
         lines.append("| 分箱 | 置信度 | 准确率 | 样本数 |")
         lines.append("|---|---|---|---|")
         for conf, acc, cnt in calib_data[r["name"]]:
@@ -107,14 +113,20 @@ def main():
             runner.save_result(res, "output", "demo_overconfident.json")
             print(f"   [overconfident_hallucinator] MetaScore={res['MetaScore']['MetaScore']}")
 
-    # 校准曲线数据（供报告）
+    # 校准曲线数据 + SVG 可视化
     calib = {}
+    svg_files = {}
     for r in results:
         cc = r["summary"]["模块A_知识校准"].get("calibration_curve")
         calib[r["name"]] = cc if cc is not None else []
+        if cc:
+            fname = f"calibration_curve_{r['name'].replace('/', '_')}.svg"
+            visualize.save_calibration_svg(cc, os.path.join("output", fname),
+                                           title=f"校准曲线 · {r['label']}")
+            svg_files[r["name"]] = fname
 
     # 汇总报告
-    report_md = build_report(results, calib)
+    report_md = build_report(results, calib, svg_files)
     os.makedirs(os.path.dirname(args.report), exist_ok=True)
     with open(args.report, "w", encoding="utf-8") as f:
         f.write(report_md)

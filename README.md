@@ -60,17 +60,21 @@ MetaScope 把元认知拆成三个可隔离测量的子能力，用可量化、�
 python run_benchmark.py
 
 # 2) 产物
-#    data/benchmark.json       题目数据
+#    data/benchmark.json       题目数据（A=40 / B=22 / C=20）
 #    output/results.json       结构化指标结果
-#    output/report.md          人类可读报告（含校准曲线）
-#    output/demo_well_calibrated.json / demo_overconfident.json
+#    output/report.md          人类可读报告
+#    output/calibration_curve_*.svg   校准曲线可视化
+
+# 3) 人类基线（真人作答后重算）
+python human_sheet.py           # 生成答题表 output/human_answer_sheet.md
+python score_human.py           # 读取 output/human_answers.csv 计算人类基线
 ```
 
 运行后你会看到两个“性格”截然不同的模型被清晰区分：
 
 ```
-演示模型①：校准良好（知道才自信，不知道会拒绝）  →  MetaScore ≈ 94
-演示模型②：过自信+幻觉（不知道也强行猜）        →  MetaScore ≈ 32
+演示模型①：校准良好（知道才自信，不知道会拒绝）  →  MetaScore = 95.4
+演示模型②：过自信+幻觉（不知道也强行猜）        →  MetaScore = 33.6
 ```
 
 这说明基准对**元认知水平**有真实区分度，而非测“谁知识更广”。
@@ -92,7 +96,8 @@ set METASCOPE_MODEL=deepseek-chat
 python run_benchmark.py --api
 ```
 
-结果会写入 `output/api_<model>.json`，可与演示模型、人类基线放在同一张雷达/表格里对比。
+结果会写入 `output/api_<model>.json`，可与演示模型、人类基线放在同一张表格里对比。
+**已实测**：DeepSeek-chat 全量 82 题 → 准确率 1.000、正确拒绝率 1.000、幻觉率 0、**MetaScore 99.9**（结果见 `output/report_api_deepseek.md`）。全对导致已知项 AUROC 退化为 0.500，暴露“天花板效应”，是提升难度区间的改进方向。
 
 ---
 
@@ -105,9 +110,13 @@ metascope/                    # 核心 Python 包
   scoring.py                  # 指标：ECE/Brier/MCE/校准/AUROC/幻觉/自我预测
   clients.py                  # API 客户端（OpenAI 兼容）+ 离线演示模型
   runner.py                   # 评测管线：加载→作答→判定→汇总
-run_benchmark.py              # 命令行入口
+  visualize.py                # 校准曲线 SVG 可视化
+run_benchmark.py              # 命令行入口（--api 接入真实模型）
+human_sheet.py                # 生成人类答题表（真人基线采集）
+score_human.py                # 人类基线评分
+requirements.txt / .gitignore # 零依赖声明；.env 受保护（API Key 不入库）
 data/benchmark.json           # 生成的题目数据
-output/                       # 评测结果（json + markdown 报告）
+output/                       # 评测结果（json + markdown + 校准曲线 SVG）
 ```
 
 ---
@@ -126,12 +135,9 @@ output/                       # 评测结果（json + markdown 报告）
 
 ---
 
-## 八、人类基线（设计预期）
+## 八、人类基线（实测结果）
 
-人类在“知识校准”上通常校准良好（ECE 约 5–10%），但在困难领域存在经典**过自信偏差**；
-对“无有效答案/信息不足”项，成年人普遍能正确拒绝（拒绝率接近 1，幻觉率≈0）——
-这正是 MetaScope 想同时测的两个方向。基准难度可调（题目库扩展、陷阱强度），
-可避免地板/天花板效应。
+按同一协议真人作答 23 题后实测：知识准确率 **1.000**、正确拒绝率 **1.000**、幻觉率 **0**、ECE **0.089**（轻微保守）、**MetaScore 97.0**——恰落在"校准良好演示(95.4)"与"前沿模型(99.9)"之间，符合直觉。这同时验证了两点：成年人普遍能正确识别并拒绝无有效答案/信息不足项；熟悉材料的人类校准良好、略偏保守。作答文件与评分工具见 `output/human_answer_sheet.md`、`human_sheet.py`、`score_human.py`。
 
 ---
 

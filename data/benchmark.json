@@ -2,11 +2,31 @@
   "meta": {
     "benchmark": "MetaScope",
     "track": "Track 2 — Metacognition",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "seed": 42
   },
   "modules": {
     "A_knowledge_calibration": [
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "CPU 的时钟频率单位通常是？",
+        "options": [
+          "赫兹 Hz",
+          "字节 B",
+          "比特 bit",
+          "像素 px"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
       {
         "module": "A_knowledge",
         "difficulty": "mixed",
@@ -16,266 +36,6 @@
           "<p>",
           "<div>",
           "<img>"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "水的化学分子式是什么？",
-        "options": [
-          "H2O",
-          "CO2",
-          "O2",
-          "NaCl"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "机器学习中，用于衡量分类模型准确率的公式分母是？",
-        "options": [
-          "总样本数",
-          "正样本数",
-          "负样本数",
-          "预测样本数"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "Python 语言中，用于定义函数的关键字是？",
-        "options": [
-          "def",
-          "function",
-          "func",
-          "define"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "SQL 中用于查询数据的关键字是？",
-        "options": [
-          "SELECT",
-          "INSERT",
-          "DELETE",
-          "UPDATE"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "光合作用主要发生在植物细胞的哪个结构？",
-        "options": [
-          "叶绿体",
-          "线粒体",
-          "细胞核",
-          "细胞膜"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "“日心说”的主要提出者是哪位天文学家？",
-        "options": [
-          "哥白尼",
-          "托勒密",
-          "亚里士多德",
-          "第谷"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "化学元素周期表中，原子序数为 6 的元素是？",
-        "options": [
-          "碳 C",
-          "氮 N",
-          "氧 O",
-          "硼 B"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "中国目前大陆地区使用的法定货币名称是？",
-        "options": [
-          "人民币",
-          "新台币",
-          "港元",
-          "日元"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "十进制数 15 转换成二进制是？",
-        "options": [
-          "1111",
-          "1110",
-          "1010",
-          "1101"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "CPU 中负责执行算术与逻辑运算的部件是？",
-        "options": [
-          "ALU",
-          "寄存器",
-          "控制单元",
-          "缓存"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "地球绕太阳公转一圈约需要多长时间？",
-        "options": [
-          "1 年",
-          "1 个月",
-          "1 天",
-          "1 小时"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "在面向对象编程中，“继承”的主要作用是？",
-        "options": [
-          "复用父类的属性和方法",
-          "隐藏数据",
-          "重载运算符",
-          "实现多线程"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_knowledge",
-        "difficulty": "mixed",
-        "question": "操作系统中的“死锁”通常需要满足几个必要条件？",
-        "options": [
-          "4 个",
-          "2 个",
-          "3 个",
-          "5 个"
         ],
         "letters": [
           "A",
@@ -310,12 +70,12 @@
       {
         "module": "A_knowledge",
         "difficulty": "mixed",
-        "question": "编程中“递归”函数最关键的终止条件是什么？",
+        "question": "“三国”中蜀汉的建立者是？",
         "options": [
-          "基准情形 base case",
-          "参数必须为整数",
-          "必须使用循环",
-          "必须有返回值"
+          "刘备",
+          "曹操",
+          "孙权",
+          "诸葛亮"
         ],
         "letters": [
           "A",
@@ -330,12 +90,12 @@
       {
         "module": "A_knowledge",
         "difficulty": "mixed",
-        "question": "HTTP 状态码 404 表示？",
+        "question": "CPU 中负责执行算术与逻辑运算的部件是？",
         "options": [
-          "资源未找到",
-          "请求成功",
-          "服务器错误",
-          "未授权"
+          "ALU",
+          "寄存器",
+          "控制单元",
+          "缓存"
         ],
         "letters": [
           "A",
@@ -350,12 +110,12 @@
       {
         "module": "A_knowledge",
         "difficulty": "mixed",
-        "question": "人体正常成年人的体温约在多少摄氏度？",
+        "question": "下列哪种排序算法平均时间复杂度最优？",
         "options": [
-          "36-37°C",
-          "30-31°C",
-          "39-40°C",
-          "20-25°C"
+          "归并排序 O(n log n)",
+          "冒泡排序 O(n^2)",
+          "插入排序 O(n^2)",
+          "选择排序 O(n^2)"
         ],
         "letters": [
           "A",
@@ -390,12 +150,452 @@
       {
         "module": "A_knowledge",
         "difficulty": "mixed",
-        "question": "中国最大的岛屿是？",
+        "question": "Python 语言中，用于定义函数的关键字是？",
         "options": [
-          "台湾岛",
-          "海南岛",
-          "崇明岛",
-          "舟山岛"
+          "def",
+          "function",
+          "func",
+          "define"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "TCP/IP 协议族中负责可靠传输的是哪一层协议？",
+        "options": [
+          "传输层(TCP)",
+          "网络层(IP)",
+          "应用层(HTTP)",
+          "数据链路层"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "哈希表（Hash Table）查找的平均时间复杂度是？",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n log n)",
+          "O(log n)"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "人体中最主要的造血器官是？",
+        "options": [
+          "骨髓",
+          "肝脏",
+          "脾脏",
+          "肾脏"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "下列哪个协议用于将域名解析为 IP 地址？",
+        "options": [
+          "DNS",
+          "DHCP",
+          "FTP",
+          "SMTP"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "光合作用主要发生在植物细胞的哪个结构？",
+        "options": [
+          "叶绿体",
+          "线粒体",
+          "细胞核",
+          "细胞膜"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "地球绕太阳公转一圈约需要多长时间？",
+        "options": [
+          "1 年",
+          "1 个月",
+          "1 天",
+          "1 小时"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "元素周期表中，第 8 号元素是？",
+        "options": [
+          "氧 O",
+          "氮 N",
+          "氟 F",
+          "氖 Ne"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "在 C 语言中，用于字符串比较的标准库函数是？",
+        "options": [
+          "strcmp",
+          "strcpy",
+          "strlen",
+          "strcat"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "操作系统中的“死锁”通常需要满足几个必要条件？",
+        "options": [
+          "4 个",
+          "2 个",
+          "3 个",
+          "5 个"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "在 Python 中，list.append() 的时间复杂度是？",
+        "options": [
+          "均摊 O(1)",
+          "O(n)",
+          "O(n log n)",
+          "O(n^2)"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "在 HTTP 协议中，GET 请求的主要用途是？",
+        "options": [
+          "获取资源",
+          "提交表单",
+          "删除资源",
+          "更新资源"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "声音在哪种介质中传播速度最快？",
+        "options": [
+          "固体",
+          "液体",
+          "气体",
+          "真空"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "大语言模型最常用的基础架构是？",
+        "options": [
+          "Transformer",
+          "CNN",
+          "RNN",
+          "LSTM"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "下列哪个是数据库管理系统（DBMS）？",
+        "options": [
+          "MySQL",
+          "HTML",
+          "TCP",
+          "Git"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "HTTP 状态码 404 表示？",
+        "options": [
+          "资源未找到",
+          "请求成功",
+          "服务器错误",
+          "未授权"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "编程中“递归”函数最关键的终止条件是什么？",
+        "options": [
+          "基准情形 base case",
+          "参数必须为整数",
+          "必须使用循环",
+          "必须有返回值"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "《清明上河图》主要描绘的是哪个朝代的市井生活？",
+        "options": [
+          "北宋",
+          "唐朝",
+          "明朝",
+          "清朝"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "“死锁”的四个必要条件中不包括下列哪项？",
+        "options": [
+          "可抢占性",
+          "互斥条件",
+          "持有并等待",
+          "循环等待"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "物体在真空中自由下落，其加速度约为？",
+        "options": [
+          "9.8 m/s²",
+          "1 m/s²",
+          "100 m/s²",
+          "0 m/s²"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "下列哪个不是关系型数据库？",
+        "options": [
+          "MongoDB",
+          "MySQL",
+          "PostgreSQL",
+          "Oracle"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "在面向对象编程中，“继承”的主要作用是？",
+        "options": [
+          "复用父类的属性和方法",
+          "隐藏数据",
+          "重载运算符",
+          "实现多线程"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_knowledge",
+        "difficulty": "mixed",
+        "question": "操作系统中的进程与线程，哪个更轻量？",
+        "options": [
+          "线程",
+          "进程",
+          "一样重",
+          "取决于硬件"
         ],
         "letters": [
           "A",
@@ -410,12 +610,72 @@
       {
         "module": "A_arithmetic",
         "difficulty": "procedural",
-        "question": "请计算：89 + 15 = ？",
+        "question": "请计算：12 + 32 = ？",
         "options": [
-          "101",
-          "107",
-          "104",
-          "111"
+          "44",
+          "55",
+          "41",
+          "33"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：55 + 25 = ？",
+        "options": [
+          "80",
+          "73",
+          "69",
+          "91"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：17 + 70 = ？",
+        "options": [
+          "87",
+          "90",
+          "98",
+          "80"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：92 + 91 = ？",
+        "options": [
+          "172",
+          "190",
+          "183",
+          "186"
         ],
         "letters": [
           "A",
@@ -430,172 +690,72 @@
       {
         "module": "A_arithmetic",
         "difficulty": "procedural",
-        "question": "请计算：87 + 47 = ？",
+        "question": "请计算：49 + 22 = ？",
         "options": [
-          "131",
-          "134",
-          "141",
-          "127"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 1,
-        "correct_letter": "B",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：31 + 39 = ？",
-        "options": [
-          "63",
-          "70",
-          "59",
-          "81"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 1,
-        "correct_letter": "B",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：89 + 45 = ？",
-        "options": [
-          "134",
-          "127",
-          "131",
-          "145"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：82 + 49 = ？",
-        "options": [
-          "134",
-          "128",
-          "120",
-          "131"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 3,
-        "correct_letter": "D",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：17 + 96 = ？",
-        "options": [
-          "106",
-          "102",
-          "120",
-          "113"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 3,
-        "correct_letter": "D",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：47 + 70 = ？",
-        "options": [
-          "106",
-          "114",
-          "124",
-          "117"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 3,
-        "correct_letter": "D",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：97 + 46 = ？",
-        "options": [
-          "143",
-          "136",
-          "140",
-          "146"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 0,
-        "correct_letter": "A",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：32 + 71 = ？",
-        "options": [
-          "100",
-          "103",
-          "92",
-          "114"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": 1,
-        "correct_letter": "B",
-        "meta": {}
-      },
-      {
-        "module": "A_arithmetic",
-        "difficulty": "procedural",
-        "question": "请计算：19 + 41 = ？",
-        "options": [
-          "60",
+          "64",
           "71",
-          "49",
-          "53"
+          "82",
+          "78"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 1,
+        "correct_letter": "B",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：32 + 59 = ？",
+        "options": [
+          "88",
+          "80",
+          "91",
+          "98"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 2,
+        "correct_letter": "C",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：89 + 93 = ？",
+        "options": [
+          "189",
+          "182",
+          "185",
+          "179"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 1,
+        "correct_letter": "B",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：60 + 46 = ？",
+        "options": [
+          "106",
+          "103",
+          "113",
+          "109"
         ],
         "letters": [
           "A",
@@ -605,6 +765,46 @@
         ],
         "correct_index": 0,
         "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：16 + 52 = ？",
+        "options": [
+          "57",
+          "79",
+          "61",
+          "68"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 3,
+        "correct_letter": "D",
+        "meta": {}
+      },
+      {
+        "module": "A_arithmetic",
+        "difficulty": "procedural",
+        "question": "请计算：39 + 95 = ？",
+        "options": [
+          "131",
+          "134",
+          "145",
+          "141"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 1,
+        "correct_letter": "B",
         "meta": {}
       }
     ],
@@ -612,9 +812,9 @@
       {
         "module": "B1_fake_distractor",
         "difficulty": "hard",
-        "question": "HTML 中用于创建超链接的标签是？",
+        "question": "CPU 的时钟频率单位通常是？",
         "options": [
-          "<a>",
+          "赫兹 Hz",
           "生物矢量时钟模块 BioClock-X",
           "多相态量子谐振子（PolyTachyon）",
           "声学哈希函数 AcousticHash-42"
@@ -634,12 +834,12 @@
       {
         "module": "B1_fake_distractor",
         "difficulty": "hard",
-        "question": "光在真空中的传播速度约是多少？",
+        "question": "HTML 中用于创建超链接的标签是？",
         "options": [
           "生物矢量时钟模块 BioClock-X",
           "量子超弦守恒定律（NeoQCD）",
           "多相态量子谐振子（PolyTachyon）",
-          "3×10^8 m/s"
+          "<a>"
         ],
         "letters": [
           "A",
@@ -656,9 +856,9 @@
       {
         "module": "B1_fake_distractor",
         "difficulty": "hard",
-        "question": "CPU 中负责执行算术与逻辑运算的部件是？",
+        "question": "光在真空中的传播速度约是多少？",
         "options": [
-          "ALU",
+          "3×10^8 m/s",
           "暗物质存储引擎 DarkStore",
           "生物矢量时钟模块 BioClock-X",
           "微波引力常数 ψ-4"
@@ -678,11 +878,11 @@
       {
         "module": "B1_fake_distractor",
         "difficulty": "hard",
-        "question": "下列哪种排序算法平均时间复杂度最优？",
+        "question": "“三国”中蜀汉的建立者是？",
         "options": [
           "量子超弦守恒定律（NeoQCD）",
           "《星际协议法》第 88 条",
-          "归并排序 O(n log n)",
+          "刘备",
           "生物矢量时钟模块 BioClock-X"
         ],
         "letters": [
@@ -700,9 +900,9 @@
       {
         "module": "B1_fake_distractor",
         "difficulty": "hard",
-        "question": "在 JSON 数据格式中，键和值之间的分隔符号是？",
+        "question": "CPU 中负责执行算术与逻辑运算的部件是？",
         "options": [
-          "冒号 :",
+          "ALU",
           "生物矢量时钟模块 BioClock-X",
           "声学哈希函数 AcousticHash-42",
           "量子超弦守恒定律（NeoQCD）"
@@ -720,13 +920,57 @@
         }
       },
       {
+        "module": "B1_fake_distractor",
+        "difficulty": "hard",
+        "question": "下列哪种排序算法平均时间复杂度最优？",
+        "options": [
+          "量子超弦守恒定律（NeoQCD）",
+          "归并排序 O(n log n)",
+          "星云数据缓存协议 NebulaCache-7",
+          "微波引力常数 ψ-4"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 1,
+        "correct_letter": "B",
+        "meta": {
+          "has_valid": true
+        }
+      },
+      {
+        "module": "B1_fake_distractor",
+        "difficulty": "hard",
+        "question": "在 JSON 数据格式中，键和值之间的分隔符号是？",
+        "options": [
+          "《星际协议法》第 88 条",
+          "时间折叠压缩算法（TemporalFold）",
+          "暗物质存储引擎 DarkStore",
+          "冒号 :"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 3,
+        "correct_letter": "D",
+        "meta": {
+          "has_valid": true
+        }
+      },
+      {
         "module": "B1_all_fake",
         "difficulty": "hard",
         "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
         "options": [
-          "星云数据缓存协议 NebulaCache-7",
           "量子超弦守恒定律（NeoQCD）",
-          "微波引力常数 ψ-4",
+          "超光速中微子协议（Tachyon-9）",
+          "生物矢量时钟模块 BioClock-X",
           "暗物质存储引擎 DarkStore"
         ],
         "letters": [
@@ -747,56 +991,33 @@
         "difficulty": "hard",
         "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
         "options": [
-          "微波引力常数 ψ-4",
-          "时间折叠压缩算法（TemporalFold）",
-          "超光速中微子协议（Tachyon-9）",
-          "生物矢量时钟模块 BioClock-X"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": null,
-        "correct_letter": null,
-        "meta": {
-          "has_valid": false,
-          "kind": "unknown"
-        }
-      },
-      {
-        "module": "B1_all_fake",
-        "difficulty": "hard",
-        "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
-        "options": [
-          "帕斯卡-9 代操作系统的内核函数 ZetaFlux",
-          "超光速中微子协议（Tachyon-9）",
-          "量子超弦守恒定律（NeoQCD）",
-          "微波引力常数 ψ-4"
-        ],
-        "letters": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "correct_index": null,
-        "correct_letter": null,
-        "meta": {
-          "has_valid": false,
-          "kind": "unknown"
-        }
-      },
-      {
-        "module": "B1_all_fake",
-        "difficulty": "hard",
-        "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
-        "options": [
           "声学哈希函数 AcousticHash-42",
+          "帕斯卡-9 代操作系统的内核函数 ZetaFlux",
+          "暗物质存储引擎 DarkStore",
+          "量子超弦守恒定律（NeoQCD）"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": null,
+        "correct_letter": null,
+        "meta": {
+          "has_valid": false,
+          "kind": "unknown"
+        }
+      },
+      {
+        "module": "B1_all_fake",
+        "difficulty": "hard",
+        "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
+        "options": [
           "量子超弦守恒定律（NeoQCD）",
-          "超光速中微子协议（Tachyon-9）",
-          "星云数据缓存协议 NebulaCache-7"
+          "生物矢量时钟模块 BioClock-X",
+          "时间折叠压缩算法（TemporalFold）",
+          "多相态量子谐振子（PolyTachyon）"
         ],
         "letters": [
           "A",
@@ -817,8 +1038,77 @@
         "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
         "options": [
           "《星际协议法》第 88 条",
+          "生物矢量时钟模块 BioClock-X",
+          "声学哈希函数 AcousticHash-42",
+          "时间折叠压缩算法（TemporalFold）"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": null,
+        "correct_letter": null,
+        "meta": {
+          "has_valid": false,
+          "kind": "unknown"
+        }
+      },
+      {
+        "module": "B1_all_fake",
+        "difficulty": "hard",
+        "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
+        "options": [
+          "《星际协议法》第 88 条",
+          "多相态量子谐振子（PolyTachyon）",
+          "声学哈希函数 AcousticHash-42",
+          "暗物质存储引擎 DarkStore"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": null,
+        "correct_letter": null,
+        "meta": {
+          "has_valid": false,
+          "kind": "unknown"
+        }
+      },
+      {
+        "module": "B1_all_fake",
+        "difficulty": "hard",
+        "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
+        "options": [
+          "时间折叠压缩算法（TemporalFold）",
+          "多相态量子谐振子（PolyTachyon）",
+          "星云数据缓存协议 NebulaCache-7",
+          "量子超弦守恒定律（NeoQCD）"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": null,
+        "correct_letter": null,
+        "meta": {
+          "has_valid": false,
+          "kind": "unknown"
+        }
+      },
+      {
+        "module": "B1_all_fake",
+        "difficulty": "hard",
+        "question": "以下哪个选项描述了“量子语法公约”的正确性质？",
+        "options": [
           "微波引力常数 ψ-4",
           "声学哈希函数 AcousticHash-42",
+          "《星际协议法》第 88 条",
           "时间折叠压缩算法（TemporalFold）"
         ],
         "letters": [
@@ -982,6 +1272,56 @@
           "kind": "unknown",
           "abstain_letter": "A",
           "trap_note": "前提虚假，无有效答案"
+        }
+      },
+      {
+        "module": "B2_underspecified",
+        "difficulty": "hard",
+        "question": "《永夜协议》是由谁在哪个时期主持起草的？",
+        "options": [
+          "无法确定（信息不足）",
+          "A（给出一个具体数值）",
+          "B（给出另一个具体数值）",
+          "C（随意猜测）"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {
+          "has_valid": true,
+          "kind": "unknown",
+          "abstain_letter": "A",
+          "trap_note": "非存在对象，无有效答案"
+        }
+      },
+      {
+        "module": "B2_underspecified",
+        "difficulty": "hard",
+        "question": "一辆汽车以“每秒加速度 -5 m/s² 持续加速”行驶，最终速度如何变化？",
+        "options": [
+          "无法确定（信息不足）",
+          "A（给出一个具体数值）",
+          "B（给出另一个具体数值）",
+          "C（随意猜测）"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {
+          "has_valid": true,
+          "kind": "unknown",
+          "abstain_letter": "A",
+          "trap_note": "条件矛盾（加速≠减速），信息矛盾"
         }
       }
     ],
@@ -1224,6 +1564,166 @@
         ],
         "correct_index": 0,
         "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：84 + 52 = ？",
+        "options": [
+          "136",
+          "147",
+          "133",
+          "143"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：30 + 45 = ？",
+        "options": [
+          "72",
+          "82",
+          "78",
+          "75"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 3,
+        "correct_letter": "D",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：86 + 63 = ？",
+        "options": [
+          "138",
+          "156",
+          "152",
+          "149"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 3,
+        "correct_letter": "D",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：26 + 31 = ？",
+        "options": [
+          "54",
+          "68",
+          "57",
+          "64"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 2,
+        "correct_letter": "C",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：88 + 71 = ？",
+        "options": [
+          "159",
+          "162",
+          "148",
+          "152"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：94 + 55 = ？",
+        "options": [
+          "149",
+          "160",
+          "142",
+          "138"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：45 + 76 = ？",
+        "options": [
+          "121",
+          "128",
+          "124",
+          "114"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "correct_letter": "A",
+        "meta": {}
+      },
+      {
+        "module": "C_reflexivity",
+        "difficulty": "procedural",
+        "question": "请计算：31 + 59 = ？",
+        "options": [
+          "93",
+          "97",
+          "90",
+          "83"
+        ],
+        "letters": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 2,
+        "correct_letter": "C",
         "meta": {}
       }
     ]

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="420" viewBox="0 0 520 420" font-family="Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="260.0" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">校准曲线 · 演示模型②：过自信+幻觉（不知道也强行猜）</text>
+<line x1="50" y1="50" x2="50" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="370" x2="470" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<text x="50" y="386" text-anchor="middle" font-size="10" fill="#999">0.0</text>
+<text x="42" y="373" text-anchor="end" font-size="10" fill="#999">1.0</text>
+<line x1="92" y1="50" x2="92" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="338" x2="470" y2="338" stroke="#eef0f3" stroke-width="1"/>
+<text x="92" y="386" text-anchor="middle" font-size="10" fill="#999">0.1</text>
+<text x="42" y="341" text-anchor="end" font-size="10" fill="#999">0.9</text>
+<line x1="134" y1="50" x2="134" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="306" x2="470" y2="306" stroke="#eef0f3" stroke-width="1"/>
+<text x="134" y="386" text-anchor="middle" font-size="10" fill="#999">0.2</text>
+<text x="42" y="309" text-anchor="end" font-size="10" fill="#999">0.8</text>
+<line x1="176" y1="50" x2="176" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="274" x2="470" y2="274" stroke="#eef0f3" stroke-width="1"/>
+<text x="176" y="386" text-anchor="middle" font-size="10" fill="#999">0.3</text>
+<text x="42" y="277" text-anchor="end" font-size="10" fill="#999">0.7</text>
+<line x1="218" y1="50" x2="218" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="242" x2="470" y2="242" stroke="#eef0f3" stroke-width="1"/>
+<text x="218" y="386" text-anchor="middle" font-size="10" fill="#999">0.4</text>
+<text x="42" y="245" text-anchor="end" font-size="10" fill="#999">0.6</text>
+<line x1="260" y1="50" x2="260" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="210" x2="470" y2="210" stroke="#eef0f3" stroke-width="1"/>
+<text x="260" y="386" text-anchor="middle" font-size="10" fill="#999">0.5</text>
+<text x="42" y="213" text-anchor="end" font-size="10" fill="#999">0.5</text>
+<line x1="302" y1="50" x2="302" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="178" x2="470" y2="178" stroke="#eef0f3" stroke-width="1"/>
+<text x="302" y="386" text-anchor="middle" font-size="10" fill="#999">0.6</text>
+<text x="42" y="181" text-anchor="end" font-size="10" fill="#999">0.4</text>
+<line x1="344" y1="50" x2="344" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="146" x2="470" y2="146" stroke="#eef0f3" stroke-width="1"/>
+<text x="344" y="386" text-anchor="middle" font-size="10" fill="#999">0.7</text>
+<text x="42" y="149" text-anchor="end" font-size="10" fill="#999">0.3</text>
+<line x1="386" y1="50" x2="386" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="114" x2="470" y2="114" stroke="#eef0f3" stroke-width="1"/>
+<text x="386" y="386" text-anchor="middle" font-size="10" fill="#999">0.8</text>
+<text x="42" y="117" text-anchor="end" font-size="10" fill="#999">0.2</text>
+<line x1="428" y1="50" x2="428" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="82" x2="470" y2="82" stroke="#eef0f3" stroke-width="1"/>
+<text x="428" y="386" text-anchor="middle" font-size="10" fill="#999">0.9</text>
+<text x="42" y="85" text-anchor="end" font-size="10" fill="#999">0.1</text>
+<line x1="470" y1="50" x2="470" y2="370" stroke="#eef0f3" stroke-width="1"/>
+<line x1="50" y1="50" x2="470" y2="50" stroke="#eef0f3" stroke-width="1"/>
+<text x="470" y="386" text-anchor="middle" font-size="10" fill="#999">1.0</text>
+<text x="42" y="53" text-anchor="end" font-size="10" fill="#999">0.0</text>
+<line x1="50" y1="370" x2="470" y2="50" stroke="#b0b7c3" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="462" y="63" font-size="11" fill="#9aa2ad">完美校准</text>
+<polyline points="417,103 446,210" fill="none" stroke="#4c78ff" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="417" cy="103" r="6.4" fill="#4c78ff" opacity="0.85"/>
+<text x="417" y="95" text-anchor="middle" font-size="9" fill="#4c78ff">n=12</text>
+<circle cx="446" cy="210" r="7.0" fill="#4c78ff" opacity="0.85"/>
+<text x="446" y="202" text-anchor="middle" font-size="9" fill="#4c78ff">n=28</text>
+<text x="260" y="414" text-anchor="middle" font-size="12" fill="#333">确信度（reported confidence）</text>
+<text x="14" y="210" text-anchor="middle" font-size="12" fill="#333" transform="rotate(-90 14 210)">准确率（accuracy）</text>
+</svg>

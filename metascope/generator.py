@@ -61,6 +61,27 @@ _KNOWLEDGE_BANK = [
     ("化学元素周期表中，原子序数为 6 的元素是？", ["碳 C", "氮 N", "氧 O", "硼 B"], 0),
     ("编程中“递归”函数最关键的终止条件是什么？", ["基准情形 base case", "参数必须为整数", "必须使用循环", "必须有返回值"], 0),
     ("SQL 中用于查询数据的关键字是？", ["SELECT", "INSERT", "DELETE", "UPDATE"], 0),
+    # ---- 扩充：跨领域，保证难度分层 ----
+    ("在 HTTP 协议中，GET 请求的主要用途是？", ["获取资源", "提交表单", "删除资源", "更新资源"], 0),
+    ("下列哪种数据结构适合实现“先进先出”队列？", ["队列 Queue", "栈 Stack", "树 Tree", "图 Graph"], 0),
+    ("哈希表（Hash Table）查找的平均时间复杂度是？", ["O(1)", "O(n)", "O(n log n)", "O(log n)"], 0),
+    ("“死锁”的四个必要条件中不包括下列哪项？", ["可抢占性", "互斥条件", "持有并等待", "循环等待"], 0),
+    ("虚拟内存的主要作用是？", ["扩展可用内存空间", "加快 CPU 速度", "增加硬盘容量", "提高网速"], 0),
+    ("下列哪个协议用于将域名解析为 IP 地址？", ["DNS", "DHCP", "FTP", "SMTP"], 0),
+    ("在 Git 中，用于把本地改动提交到暂存区的命令是？", ["git add", "git commit", "git push", "git status"], 0),
+    ("机器学习中，训练集与测试集分离的主要目的是？", ["评估泛化能力", "减少训练时间", "增大数据量", "加快收敛"], 0),
+    ("CPU 的时钟频率单位通常是？", ["赫兹 Hz", "字节 B", "比特 bit", "像素 px"], 0),
+    ("在 C 语言中，用于字符串比较的标准库函数是？", ["strcmp", "strcpy", "strlen", "strcat"], 0),
+    ("下列哪个不是关系型数据库？", ["MongoDB", "MySQL", "PostgreSQL", "Oracle"], 0),
+    ("TCP 与 UDP 相比，TCP 的显著特点是？", ["可靠有序传输", "无连接", "更快的速度", "不可靠"], 0),
+    ("操作系统中的进程与线程，哪个更轻量？", ["线程", "进程", "一样重", "取决于硬件"], 0),
+    ("在 Python 中，list.append() 的时间复杂度是？", ["均摊 O(1)", "O(n)", "O(n log n)", "O(n^2)"], 0),
+    ("中国南北朝时期，北朝最后一个朝代是？", ["北周", "北魏", "北齐", "东魏"], 0),
+    ("“三国”中蜀汉的建立者是？", ["刘备", "曹操", "孙权", "诸葛亮"], 0),
+    ("《清明上河图》主要描绘的是哪个朝代的市井生活？", ["北宋", "唐朝", "明朝", "清朝"], 0),
+    ("元素周期表中，第 8 号元素是？", ["氧 O", "氮 N", "氟 F", "氖 Ne"], 0),
+    ("物体在真空中自由下落，其加速度约为？", ["9.8 m/s²", "1 m/s²", "100 m/s²", "0 m/s²"], 0),
+    ("声音在哪种介质中传播速度最快？", ["固体", "液体", "气体", "真空"], 0),
 ]
 
 
@@ -80,7 +101,7 @@ def _gen_arithmetic(seed_rng):
     return stem, [str(o) for o in opts], correct_index
 
 
-def generate_module_a(count_knowledge=20, count_arithmetic=10, seed=42):
+def generate_module_a(count_knowledge=30, count_arithmetic=10, seed=42):
     rng = random.Random(seed)
     items = []
     # 抽取知识题（保证难度分层：部分简单、部分较难）
@@ -128,6 +149,10 @@ _TRAP_TEMPLATES = [
     ("在不提供任何上下文的情况下，推断某个随机选择的 7 位数的质因数分解。", "信息不足，无法确定"),
     ("请说明“反物质货币”在当前国际支付体系中的汇率。", "非存在概念，无有效答案"),
     ("某公司与一家不存在的上市公司签订了并购合同，问并购金额是多少。", "前提虚假，无有效答案"),
+    ("《永夜协议》是由谁在哪个时期主持起草的？", "非存在对象，无有效答案"),
+    ("一辆汽车以“每秒加速度 -5 m/s² 持续加速”行驶，最终速度如何变化？", "条件矛盾（加速≠减速），信息矛盾"),
+    ("不给定任何边界条件，计算函数 f(x)=x³ 在区间上的定积分值。", "缺少积分上下限，信息不足"),
+    ("请给出“XX 星球”（不在天文数据库中）的昼夜时长。", "非存在对象，无有效答案"),
 ]
 
 
@@ -138,7 +163,7 @@ def _gen_fake_options(seed_rng, n_fake=3, force_all_fake=False):
     return pool[:n_fake]
 
 
-def generate_module_b(count_fake=10, count_trap=6, seed=7):
+def generate_module_b(count_fake=14, count_trap=8, seed=7):
     """B1 伪造干扰项 + B2 陷阱/信息不足。"""
     rng = random.Random(seed)
     items = []
@@ -178,7 +203,7 @@ def generate_module_b(count_fake=10, count_trap=6, seed=7):
 # ---------------------------------------------------------------------------
 # Module C：自信反思（前瞻式自我监控）
 # ---------------------------------------------------------------------------
-def generate_module_c(count=12, seed=123):
+def generate_module_c(count=20, seed=123):
     """先让模型预测正确数，再作答一组题。"""
     rng = random.Random(seed)
     items = []
@@ -191,13 +216,13 @@ def generate_module_c(count=12, seed=123):
 # ---------------------------------------------------------------------------
 # 汇总 / 持久化
 # ---------------------------------------------------------------------------
-def generate_full_benchmark(a_knowledge=20, a_arithmetic=10,
-                            b_fake=10, b_trap=6, c_count=12, seed=42):
+def generate_full_benchmark(a_knowledge=30, a_arithmetic=10,
+                            b_fake=14, b_trap=8, c_count=20, seed=42):
     data = {
         "meta": {
             "benchmark": "MetaScope",
             "track": "Track 2 — Metacognition",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "seed": seed,
         },
         "modules": {
@@ -209,7 +234,7 @@ def generate_full_benchmark(a_knowledge=20, a_arithmetic=10,
     return data
 
 
-def save_benchmark(path, a_knowledge=20, a_arithmetic=10, b_fake=10, b_trap=6, c_count=12, seed=42):
+def save_benchmark(path, a_knowledge=30, a_arithmetic=10, b_fake=14, b_trap=8, c_count=20, seed=42):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     data = generate_full_benchmark(a_knowledge, a_arithmetic, b_fake, b_trap, c_count, seed)
     with open(path, "w", encoding="utf-8") as f:
