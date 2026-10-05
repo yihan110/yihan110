@@ -1,0 +1,2 @@
+# MetaScope 仅依赖 Python 标准库（urllib / json / random / math），无需安装任何第三方包。
+# 需求：Python 3.8+

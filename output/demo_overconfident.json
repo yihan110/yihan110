@@ -1,0 +1,38 @@
+{
+  "name": "overconfident_hallucinator",
+  "label": "演示模型②：过自信+幻觉（不知道也强行猜）",
+  "summary": {
+    "模块A_知识校准": {
+      "n": 30,
+      "accuracy": 0.5666666666666667,
+      "avg_confidence": 0.9173333333333333,
+      "ece": 0.3506666666666666,
+      "mce": 0.4895,
+      "brier": 0.37822,
+      "overconfidence": 0.3506666666666666,
+      "auc_known": 0.3778280542986425
+    },
+    "模块B_未知识别": {
+      "n_unknown": 11,
+      "hallucination_rate": 0.9090909090909091,
+      "rejection_rate": 0.09090909090909091,
+      "unknown_auc": 0.9,
+      "avg_confidence_on_unknown": 0.8654545454545454,
+      "accuracy_on_unknown": 0.09090909090909091
+    },
+    "模块C_自信反思": {
+      "n": 12,
+      "predicted_correct": 12,
+      "actual_correct": 10,
+      "reflexivity_error": 0.16666666666666666,
+      "accuracy": 0.8333333333333334
+    },
+    "校准差距_known_vs_unknown": 0.7745
+  },
+  "MetaScore": {
+    "MetaScore": 31.7,
+    "校准得分": 11.4,
+    "未知识别得分": 3.6,
+    "自我监控得分": 16.7
+  }
+}

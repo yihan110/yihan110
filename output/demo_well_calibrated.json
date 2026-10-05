@@ -1,0 +1,38 @@
+{
+  "name": "well_calibrated",
+  "label": "演示模型①：校准良好（知道才自信，不知道会拒绝）",
+  "summary": {
+    "模块A_知识校准": {
+      "n": 30,
+      "accuracy": 0.9,
+      "avg_confidence": 0.8606666666666667,
+      "ece": 0.06533333333333335,
+      "mce": 0.21499999999999997,
+      "brier": 0.09234,
+      "overconfidence": 0.012999999999999989,
+      "auc_known": 0.5493827160493827
+    },
+    "模块B_未知识别": {
+      "n_unknown": 11,
+      "hallucination_rate": 0.0,
+      "rejection_rate": 1.0,
+      "unknown_auc": 0.5,
+      "avg_confidence_on_unknown": 0.6,
+      "accuracy_on_unknown": 1.0
+    },
+    "模块C_自信反思": {
+      "n": 12,
+      "predicted_correct": 11,
+      "actual_correct": 10,
+      "reflexivity_error": 0.08333333333333333,
+      "accuracy": 0.8333333333333334
+    },
+    "校准差距_known_vs_unknown": 0.4
+  },
+  "MetaScore": {
+    "MetaScore": 94.7,
+    "校准得分": 36.3,
+    "未知识别得分": 40.0,
+    "自我监控得分": 18.3
+  }
+}
