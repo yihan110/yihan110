@@ -141,7 +141,20 @@ output/                       # 评测结果（json + markdown + 校准曲线 SV
 
 ---
 
-## 九、作者与版权
+## 九、交付文档（Proposal / AI 日志 / AAR）
+
+| 文件 | 内容 | 对应 rubric 维度 |
+|------|------|------------------|
+| `ruanyihan_C2A_proposal.md` | C2A 竞赛基准提案：MetaScope 设计动机、三模块定义、指标与评分规则、基线方案、信度/效度/防作弊论证 | benchmarkDesign / researchRigor |
+| `ruanyihan_C2A_AI日志.md` | C2A 提案阶段的 AI 协作日志：多轮迭代、prompt 优化、AI 建议的采纳与驳回记录 | aiUsage |
+| `ruanyihan_C9_AI日志.md` | C9 实现阶段的 AI 协作日志：代码生成、调试过程、口径修正与失败尝试 | aiUsage |
+| `ruanyihan_C9_反思报告AAR.md` | 复盘报告（AAR）：预期-实际差异、卡点与失败经验、改进方案 | reflectionQuality |
+
+> 上述文档与本仓库代码同源：提案中定义的三个模块、MetaScope 复合分公式、反作弊设计，均可在 `metascope/`、`data/benchmark.json`、`output/` 中逐条对应核验。
+
+---
+
+## 十、作者与版权
 
 - 作者：ruanyihan（阮依涵）· 郑州西亚斯学院软件工程专业
 - 用途：AI+X Elite 20 课程 C2A/C9 挑战 · Kaggle Community Benchmarks 参赛作品
