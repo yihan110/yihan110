@@ -1,0 +1,9 @@
+﻿Running 4 test case(s) with time limit 2.0s ...
+
+  Test 1: PASS
+  Test 2: PASS
+  Test 3: PASS
+  Test 4: PASS
+
+Summary: 4/4 PASS
+All tests passed. The solution is ready to submit.
