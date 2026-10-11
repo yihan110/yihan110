@@ -1,0 +1,11 @@
+---
+name: flashcard-maker
+description: Turn a list of facts into Anki CSV cards.
+---
+
+# Flashcard Maker
+
+## Workflow
+1. Parse input facts.
+2. Build Q/A pairs.
+3. Export CSV.

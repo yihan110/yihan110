@@ -1,0 +1,18 @@
+---
+name: weather-brief
+description: >
+  Generate a one-line weather brief for a city. Use whenever the user asks
+  for today's weather in a short text form, e.g. "上海天气一句话".
+---
+
+# Weather Brief
+
+## Workflow
+1. Read city from user input.
+2. Call weather API (requests) with WEATHER_API_KEY.
+3. Format a 50-char markdown brief.
+4. Return it.
+
+## Edge Cases
+- Empty city → return friendly error.
+- Unknown city → suggest nearby city.

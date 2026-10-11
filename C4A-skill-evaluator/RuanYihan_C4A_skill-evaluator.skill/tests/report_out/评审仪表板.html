@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C4 技能提交自动评审 · 班级仪表板</title>
+<style>
+  :root { --blue:#2563eb; --green:#16a34a; --red:#dc2626; --amber:#d97706; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,'Microsoft YaHei',sans-serif;
+         margin:0; background:#f1f5f9; color:#0f172a; }
+  .wrap { max-width:1080px; margin:0 auto; padding:28px 20px 60px; }
+  header { background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff;
+            border-radius:14px; padding:26px 28px; margin-bottom:22px; }
+  header h1 { margin:0 0 6px; font-size:26px; }
+  header p { margin:2px 0; opacity:.9; font-size:13px; }
+  .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px; }
+  .card { background:#fff; border-radius:12px; padding:18px; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  .card .num { font-size:30px; font-weight:700; color:var(--blue); }
+  .card .lbl { font-size:13px; color:#64748b; margin-top:4px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px;
+           overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  th { background:#0f172a; color:#fff; padding:11px 12px; font-size:13px; text-align:left; }
+  td { padding:10px 12px; border-bottom:1px solid #e2e8f0; font-size:13px; }
+  tr:hover td { background:#f8fafc; }
+  .chip { display:inline-block; min-width:26px; text-align:center; padding:2px 5px;
+          border-radius:6px; margin-right:3px; font-size:11px; }
+  .chip.ok { background:#dcfce7; color:#166534; }
+  .chip.no { background:#fee2e2; color:#991b1b; }
+  .chip.q { background:#e0e7ff; color:#3730a3; }
+  .bar { display:inline-block; width:90px; height:8px; background:#e2e8f0;
+          border-radius:6px; vertical-align:middle; overflow:hidden; }
+  .fill { height:100%; background:linear-gradient(90deg,#3b82f6,#2563eb); }
+  .score { margin-left:8px; font-weight:700; }
+  .foot { color:#64748b; font-size:12px; margin-top:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 C4 技能提交自动评审 · 班级仪表板</h1>
+    <p>生成时间：2026-10-11 12:10 ｜ 扫描路径：<code>C:\Users\lucky\Doubao\chats\2026-10-11\new-chat-2\RuanYihan_C4A_skill-evaluator.skill\tests\fixtures\群文件</code></p>
+    <p>识别提交：6 位作者 ｜ 完整 5/5：4 ｜ 部分：1 ｜ 平均质量分：3.42/4.0</p>
+  </header>
+  <div class="cards">
+    <div class="card"><div class="num">6</div><div class="lbl">提交作者</div></div>
+    <div class="card"><div class="num" style="color:var(--green)">4</div><div class="lbl">完整提交 (5/5)</div></div>
+    <div class="card"><div class="num" style="color:var(--amber)">1</div><div class="lbl">部分提交</div></div>
+    <div class="card"><div class="num" style="color:var(--blue)">3.42</div><div class="lbl">平均质量分 / 4</div></div>
+  </div>
+  <table>
+    <thead><tr><th>排名</th><th>作者</th><th>完整性</th><th>必需文件</th>
+      <th>四条件</th><th>质量分</th><th>综合分</th></tr></thead>
+    <tbody>
+<tr><td>1</td><td><b>TomZhang</b></td><td>5/5</td><td><span class="chip ok">Sk</span><span class="chip ok">可执</span><span class="chip ok">De</span><span class="chip ok">教学</span><span class="chip ok">AI</span></td><td><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span></td><td>4.00</td><td><div class="bar"><div class="fill" style="width:100.0%"></div></div><span class="score">100.0</span></td></tr>
+<tr><td>2</td><td><b>WangXia</b></td><td>5/5</td><td><span class="chip ok">Sk</span><span class="chip ok">可执</span><span class="chip ok">De</span><span class="chip ok">教学</span><span class="chip ok">AI</span></td><td><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span></td><td>4.00</td><td><div class="bar"><div class="fill" style="width:100.0%"></div></div><span class="score">100.0</span></td></tr>
+<tr><td>3</td><td><b>阮依涵</b></td><td>5/5</td><td><span class="chip ok">Sk</span><span class="chip ok">可执</span><span class="chip ok">De</span><span class="chip ok">教学</span><span class="chip ok">AI</span></td><td><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span></td><td>4.00</td><td><div class="bar"><div class="fill" style="width:100.0%"></div></div><span class="score">100.0</span></td></tr>
+<tr><td>4</td><td><b>ZhaoLei</b></td><td>5/5</td><td><span class="chip ok">Sk</span><span class="chip ok">可执</span><span class="chip ok">De</span><span class="chip ok">教学</span><span class="chip ok">AI</span></td><td><span class="chip q">⚠️</span><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">✅</span></td><td>3.50</td><td><div class="bar"><div class="fill" style="width:92.5%"></div></div><span class="score">92.5</span></td></tr>
+<tr><td>5</td><td><b>ChenYu</b></td><td>3/5</td><td><span class="chip ok">Sk</span><span class="chip ok">可执</span><span class="chip no">De</span><span class="chip ok">教学</span><span class="chip no">AI</span></td><td><span class="chip q">✅</span><span class="chip q">✅</span><span class="chip q">⚠️</span><span class="chip q">✅</span></td><td>3.50</td><td><div class="bar"><div class="fill" style="width:76.5%"></div></div><span class="score">76.5</span></td></tr>
+<tr><td>6</td><td><b>SunQi</b></td><td>0/5</td><td><span class="chip no">Sk</span><span class="chip no">可执</span><span class="chip no">De</span><span class="chip no">教学</span><span class="chip no">AI</span></td><td><span class="chip q">⚠️</span><span class="chip q">⚠️</span><span class="chip q">❌</span><span class="chip q">⚠️</span></td><td>1.50</td><td><div class="bar"><div class="fill" style="width:22.5%"></div></div><span class="score">22.5</span></td></tr>
+    </tbody>
+  </table>
+  <p class="foot">图例：必需文件 = Skill说明 / 可执行 / Demo / 教学 / AI日志；四条件 = 可复用 / 可执行 / 可验证 / IO明确。</p>
+</div>
+</body>
+</html>
