@@ -1,0 +1,281 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{ctex}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Advanced Mathematics}
+\lhead{阮依涵}
+\rfoot{Page \thepage}
+
+\newcommand{\problem}[1]{\subsection*{Problem #1}}
+\newcommand{\solution}{\paragraph{Solution.}}
+
+\definecolor{solutioncolor}{RGB}{0, 100, 0}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries 高等数学作业} \\[0.5em]
+    {\large Advanced Mathematics} \\[0.3em]
+    阮依涵 \quad | \quad 2026-10-11
+\end{center}
+
+\hrule
+\vspace{1em}
+\problem{1}
+
+求函数 $f(x,y)=x^3+y^3-3xy$ 的偏导数 $\frac{\partial f}{\partial x}$ 和 $\frac{\partial f}{\partial y}$。
+
+\solution
+
+对 $x$ 求偏导（$y$ 视为常数）：$f_x=\frac{\partial f}{\partial x}=3 x^{2} - 3 y$
+
+对 $y$ 求偏导（$x$ 视为常数）：$f_y=\frac{\partial f}{\partial y}=- 3 x + 3 y^{2}$
+
+\textbf{Answer:}
+\[\boxed{f_x=3 x^{2} - 3 y,\; f_y=- 3 x + 3 y^{2}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{2}
+
+设 $z=e^{xy}$，求 $z$ 在点 $(1,1)$ 处的全微分 $dz$。
+
+\solution
+
+全微分：$dz = f_x\,dx + f_y\,dy = y e^{x y}\,dx + x e^{x y}\,dy$
+
+在点 $(1, 1)$ 处：$dz((1, 1)) = e dx + e dy$
+
+\textbf{Answer:}
+\[\boxed{dz((1, 1)) = e dx + e dy}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{3}
+
+用拉格朗日乘数法求函数 $f(x,y)=x^2+y^2$ 在约束条件 $x+y=2$ 下的极值。
+
+---
+
+\solution
+
+构造拉格朗日函数 $L=f-\lambda g$，其中 $f=x^{2} + y^{2}$，约束 $g=x + y - 2=0$
+
+解梯度方程组得驻点 $(1,1)$，$f=2$
+
+\textbf{Answer:}
+\[\boxed{(1,1) 处 f=2}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{4}
+
+计算二重积分 $\iint_D (x^2+y)\,dA$，其中 $D=[0,1]\times[0,1]$。
+
+\solution
+
+直角坐标化：$\iint_D x^{2} + y\,dA=\int_{0}^{1}\int_{0}^{1}x^{2} + y\,dy\,dx$
+
+逐层积分得 $=\frac{5}{6}$
+
+\textbf{Answer:}
+\[\boxed{\frac{5}{6}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{5}
+
+计算二重积分 $\iint_D xy\,dA$，其中 $D$ 是由直线 $x=0$、$y=0$ 与 $x+y=1$ 围成的三角形区域。
+
+\solution
+
+区域 $D=\{(x,y):0\le x\le 1,\;0\le y\le 1-x\}$
+
+积分化为 $\int_0^1\int_0^{1-x}x y\,dy\,dx$
+
+先对 $y$ 积分：$\int_0^1 \frac{x \left(x - 1\right)^{2}}{2}\,dx$
+
+对 $x$ 积分得 $=\frac{1}{24}$
+
+\textbf{Answer:}
+\[\boxed{\frac{1}{24}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{6}
+
+计算三重积分 $\iiint_E z\,dV$，其中 $E=[0,1]\times[0,1]\times[0,1]$ 是单位立方体。
+
+---
+
+\solution
+
+化为三次积分：$\iiint_E z\,dV=\int_{0}^{1}\int_{0}^{1}\int_{0}^{1}z\,dz\,dy\,dx$
+
+逐层积分得 $=\frac{1}{2}$
+
+\textbf{Answer:}
+\[\boxed{\frac{1}{2}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{7}
+
+判断级数 $\sum_{n=1}^{\infty} \frac{1}{n^2}$ 是否收敛，并说明理由。
+
+\solution
+
+该级数为 $p$-级数 $\sum\frac{1}{n^{2}}$
+
+由 $p$-级数判别法：$p=2>1$，故级数\textbf{收敛}。
+
+\textbf{Answer:}
+\[\boxed{收敛}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{8}
+
+用比值判别法（d'Alembert 判别法）判断级数 $\sum_{n=1}^{\infty} \frac{n!}{n^n}$ 是否收敛。
+
+\solution
+
+设一般项 $a_n=n^{- n} n!$
+
+比值判别法：$\rho=\lim_{n\to\infty}\frac{a_{n+1}}{a_n}=\lim_{n\to\infty}n^{n} \left(n + 1\right)^{- n}=e^{-1}$
+
+因 $\rho<1$，由比值判别法级数\textbf{收敛}。
+
+\textbf{Answer:}
+\[\boxed{收敛}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{9}
+
+求幂级数 $\sum_{n=1}^{\infty} \frac{x^n}{n}$ 的收敛半径与收敛区间。
+
+\solution
+
+幂级数一般项系数 $a_n=\frac{1}{n}$
+
+收敛半径：$R=\lim_{n\to\infty}\left|\frac{a_n}{a_{n+1}}\right|=1$
+
+故收敛半径 $R=1$，收敛区间 $(-1,1)$（端点需单独检验）。
+
+\textbf{Answer:}
+\[\boxed{R=1}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{10}
+
+求函数 $f(x)=e^x$ 在 $x=0$ 处的麦克劳林展开式（写出前三项及一般项）。
+
+\solution
+
+在 $x=0$ 处作展开，截取到 $o(x^{3})$：
+
+$\frac{x^{3}}{6} + \frac{x^{2}}{2} + x + 1+\cdots$
+
+\textbf{Answer:}
+\[\boxed{\frac{x^{3}}{6} + \frac{x^{2}}{2} + x + 1}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\problem{11}
+
+证明：调和级数 $\sum_{n=1}^{\infty} \frac{1}{n}$ 发散。
+
+\solution
+
+设调和级数的前 $n$ 项部分和为 $S_n=\sum_{k=1}^{n}\frac{1}{k}$。
+
+要证明级数发散，只需证明部分和数列 $\{S_n\}$ 不收敛；由于 $S_n$ 单调递增，因此只需证明 $\{S_n\}$ 无界。
+
+考虑下标为 $2^m$ 的部分和 $S_{2^m}$，其中 $m$ 为非负整数。
+
+当 $m=0$ 时，$S_{2^0}=S_1=1$。
+
+当 $m\ge 1$ 时，将 $S_{2^m}$ 按区间分组：
+
+\[
+
+S\_{2^m}=1+\left(\frac12\right)+\left(\frac13+\frac14\right)+\left(\frac15+\cdots+\frac18\right)+\cdots+\left(\frac{1}{2^{m-1}+1}+\cdots+\frac{1}{2^m}\right).
+
+\]
+
+对第 $j$ 组 $\left(\frac{1}{2^{j-1}+1}+\cdots+\frac{1}{2^j}\right)$，其中 $j=1,2,\dots,m$，共有 $2^{j-1}$ 项。
+
+该组中每一项都大于或等于该组最后一项 $\frac{1}{2^j}$，因此
+
+\[
+
+\frac{1}{2^{j-1}+1}+\cdots+\frac{1}{2^j}
+
+\ge 2^{j-1}\cdot \frac{1}{2^j}
+
+=\frac12.
+
+\]
+
+于是
+
+\[
+
+S\_{2^m}
+
+=1+\sum\_{j=1}^{m}\left(\frac{1}{2^{j-1}+1}+\cdots+\frac{1}{2^j}\right)
+
+\ge 1+\sum\_{j=1}^{m}\frac12
+
+=1+\frac{m}{2}.
+
+\]
+
+当 $m\to\infty$ 时，$1+\frac{m}{2}\to\infty$，所以 $S_{2^m}\to\infty$。
+
+由于部分和数列 $\{S_n\}$ 单调递增且存在子列 $\{S_{2^m}\}$ 趋于无穷大，故 $\{S_n\}$ 无界，从而不收敛。
+
+因此，调和级数 $\sum_{n=1}^{\infty}\frac{1}{n}$ 发散。
+
+\textbf{Answer:}
+\[\boxed{\sum_{n=1}^{\infty}\frac{1}{n}}\]
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+
+\vspace{2em}
+\noindent\textit{Auto-generated: 11/11 problems solved by SymPy.}
+\end{document}

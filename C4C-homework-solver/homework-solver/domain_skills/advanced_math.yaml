@@ -1,0 +1,152 @@
+# 高等数学领域知识（Advanced Mathematics Domain）
+# 本文件是 C4C 扩展学科的核心：把 starter kit 的"微积分极限"领域扩展到
+# 高等数学（多元微积分 + 无穷级数）。
+# 设计遵循 starter 的 ontology-grounded 思想：求解率 = 领域覆盖度。
+# 每个 concept 定义概念，method 定义解法，classifier 定义分类规则。
+
+domain: advanced_math
+extends: calculus_limits
+description: >
+  高等数学（Advanced Mathematics）扩展领域，覆盖多元函数微分学、重积分与无穷级数。
+  本领域在国产模型 DeepSeek 上实现，采用 SymPy（确定性计算）+ DeepSeek（推理/证明）双引擎。
+
+concepts:
+  - id: multivariable_calculus
+    name: 多元函数微分学
+    applies_when: "偏导数、全微分、方向导数、拉格朗日乘数法"
+    tool: sympy
+    solver: solve_partial_derivative / solve_total_differential / solve_lagrange
+    description: >
+      处理含两个及以上自变量的函数，求偏导、全微分、条件极值。
+      偏导：对某变量求导、其余视为常数；全微分 dz = fx dx + fy dy；
+      拉格朗日乘数法：解梯度方程组 ∇f = λ∇g。
+
+  - id: multiple_integral
+    name: 重积分
+    applies_when: "二重积分、三重积分、曲面积分"
+    tool: sympy
+    solver: solve_double_integral / solve_triple_integral
+    description: >
+      多重积分将单变量积分推广到多元区域。直角坐标下逐层积分：
+      二重 ∬ f dA = ∫∫ f dy dx；三重 ∭ f dV = ∫∫∫ f dz dy dx。
+
+  - id: infinite_series
+    name: 无穷级数
+    applies_when: "级数收敛性、比值判别法、幂级数、泰勒展开"
+    tool: sympy
+    solver: solve_p_series / solve_ratio_test / solve_power_series / solve_taylor
+    description: >
+      判断级数 ∑a_n 是否收敛及求幂级数收敛域。
+      p-级数判别（p>1 收敛）、比值判别法（ρ<1 收敛）、
+      幂级数收敛半径 R = 1/lim|a_{n+1}/a_n|、泰勒/麦克劳林展开。
+
+solution_methods:
+  - id: partial_derivative
+    concept: multivariable_calculus
+    name: 偏导数
+    applies_when: "含 '偏导'/'partial'/'∂'，表达式含多个变量"
+    tool: sympy
+    solve: "diff(f, var) 逐变量求导，其余变量视为常数"
+    input_schema:
+      f_expr: "多元函数表达式"
+    output_form: "f_x = ..., f_y = ..."
+
+  - id: total_differential
+    concept: multivariable_calculus
+    name: 全微分
+    applies_when: "含 '全微分'/'dz'"
+    tool: sympy
+    solve: "dz = diff(f,x)*dx + diff(f,y)*dy，可代入指定点"
+    input_schema:
+      f_expr: "函数表达式"
+      point: "可选求值点 (a,b)"
+    output_form: "dz = fx dx + fy dy"
+
+  - id: lagrange_multiplier
+    concept: multivariable_calculus
+    name: 拉格朗日乘数法
+    applies_when: "含 '拉格朗日'/'约束条件'/'条件极值'"
+    tool: sympy
+    solve: "构造 L=f-λg，解 [fx-λgx, fy-λgy, g]=0"
+    input_schema:
+      f_expr: "目标函数"
+      g_expr: "约束 g=0"
+    output_form: "驻点 (x,y) 及极值 f"
+
+  - id: double_integral
+    concept: multiple_integral
+    name: 二重积分
+    applies_when: "含 '二重积分'/'\iint'"
+    tool: sympy
+    solve: "integrate(integrate(f,(y,ymin,ymax)),(x,xmin,xmax))"
+    input_schema:
+      integrand: "被积函数"
+      bounds: "矩形或三角区域"
+    output_form: "数值/符号结果"
+
+  - id: triple_integral
+    concept: multiple_integral
+    name: 三重积分
+    applies_when: "含 '三重积分'/'\iiint'"
+    tool: sympy
+    solve: "三层 integrate 嵌套"
+    output_form: "数值/符号结果"
+
+  - id: p_series_test
+    concept: infinite_series
+    name: p-级数判别法
+    applies_when: "级数形如 ∑1/n^p"
+    tool: sympy
+    solve: "判断 p>1 收敛，p≤1 发散"
+    output_form: "收敛/发散"
+
+  - id: ratio_test
+    concept: infinite_series
+    name: 比值判别法（达朗贝尔）
+    applies_when: "含 '比值判别'/'达朗贝尔'"
+    tool: sympy
+    solve: "ρ=lim|a_{n+1}/a_n|，ρ<1 收敛，ρ>1 发散"
+    output_form: "收敛/发散"
+
+  - id: power_series
+    concept: infinite_series
+    name: 幂级数与收敛半径
+    applies_when: "含 '幂级数'/'收敛半径'/'收敛区间'"
+    tool: sympy
+    solve: "R=1/lim|a_{n+1}/a_n|"
+    output_form: "R 及收敛区间"
+
+  - id: taylor_expansion
+    concept: infinite_series
+    name: 泰勒/麦克劳林展开
+    applies_when: "含 '泰勒'/'麦克劳林'/'展开式'"
+    tool: sympy
+    solve: "series(f, x, point, n)"
+    output_form: "幂级数展开式"
+
+  - id: llm_proof
+    concept: proof
+    name: 证明题（DeepSeek 推理）
+    applies_when: "含 '证明'/'prove'，SymPy 无法精确计算"
+    tool: llm
+    engine: deepseek-chat
+    solve: "DeepSeek 生成分步推导与结论"
+    output_form: "推导步骤 + 结论"
+
+classifiers:
+  - id: multivariate_keyword
+    concept: multivariable_calculus
+    keywords: ["偏导", "全微分", "拉格朗日", "∂", "partial"]
+  - id: integral_keyword
+    concept: multiple_integral
+    keywords: ["二重积分", "三重积分", "iint", "iiint", "重积分"]
+  - id: series_keyword
+    concept: infinite_series
+    keywords: ["级数", "收敛", "幂级数", "比值判别", "泰勒", "麦克劳林"]
+  - id: proof_keyword
+    concept: proof
+    keywords: ["证明", "prove"]
+
+baseline_comparison:
+  claude_limits_domain: "微积分极限，Berkeley Math 1A，17/18 = 94.4%"
+  deepseek_advanced_math: "高等数学（多元+级数），SymPy 精确计算 + DeepSeek 推理，见验证报告"

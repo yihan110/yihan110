@@ -1,0 +1,186 @@
+[
+  {
+    "id": "1",
+    "text": "求函数 $f(x,y)=x^3+y^3-3xy$ 的偏导数 $\\frac{\\partial f}{\\partial x}$ 和 $\\frac{\\partial f}{\\partial y}$。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "f(x,y)=x^3+y^3-3xy"
+      },
+      {
+        "type": "inline",
+        "latex": "\\frac{\\partial f}{\\partial x}"
+      },
+      {
+        "type": "inline",
+        "latex": "\\frac{\\partial f}{\\partial y}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "2",
+    "text": "设 $z=e^{xy}$，求 $z$ 在点 $(1,1)$ 处的全微分 $dz$。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "z=e^{xy}"
+      },
+      {
+        "type": "inline",
+        "latex": "z"
+      },
+      {
+        "type": "inline",
+        "latex": "(1,1)"
+      },
+      {
+        "type": "inline",
+        "latex": "dz"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "3",
+    "text": "用拉格朗日乘数法求函数 $f(x,y)=x^2+y^2$ 在约束条件 $x+y=2$ 下的极值。\n\n---",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "f(x,y)=x^2+y^2"
+      },
+      {
+        "type": "inline",
+        "latex": "x+y=2"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "4",
+    "text": "计算二重积分 $\\iint_D (x^2+y)\\,dA$，其中 $D=[0,1]\\times[0,1]$。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\iint_D (x^2+y)\\,dA"
+      },
+      {
+        "type": "inline",
+        "latex": "D=[0,1]\\times[0,1]"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "5",
+    "text": "计算二重积分 $\\iint_D xy\\,dA$，其中 $D$ 是由直线 $x=0$、$y=0$ 与 $x+y=1$ 围成的三角形区域。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\iint_D xy\\,dA"
+      },
+      {
+        "type": "inline",
+        "latex": "D"
+      },
+      {
+        "type": "inline",
+        "latex": "x=0"
+      },
+      {
+        "type": "inline",
+        "latex": "y=0"
+      },
+      {
+        "type": "inline",
+        "latex": "x+y=1"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "6",
+    "text": "计算三重积分 $\\iiint_E z\\,dV$，其中 $E=[0,1]\\times[0,1]\\times[0,1]$ 是单位立方体。\n\n---",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\iiint_E z\\,dV"
+      },
+      {
+        "type": "inline",
+        "latex": "E=[0,1]\\times[0,1]\\times[0,1]"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "7",
+    "text": "判断级数 $\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ 是否收敛，并说明理由。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\sum_{n=1}^{\\infty} \\frac{1}{n^2}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "8",
+    "text": "用比值判别法（d'Alembert 判别法）判断级数 $\\sum_{n=1}^{\\infty} \\frac{n!}{n^n}$ 是否收敛。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\sum_{n=1}^{\\infty} \\frac{n!}{n^n}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "9",
+    "text": "求幂级数 $\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ 的收敛半径与收敛区间。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\sum_{n=1}^{\\infty} \\frac{x^n}{n}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "10",
+    "text": "求函数 $f(x)=e^x$ 在 $x=0$ 处的麦克劳林展开式（写出前三项及一般项）。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "f(x)=e^x"
+      },
+      {
+        "type": "inline",
+        "latex": "x=0"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  },
+  {
+    "id": "11",
+    "text": "证明：调和级数 $\\sum_{n=1}^{\\infty} \\frac{1}{n}$ 发散。",
+    "math_expressions": [
+      {
+        "type": "inline",
+        "latex": "\\sum_{n=1}^{\\infty} \\frac{1}{n}"
+      }
+    ],
+    "type": "conceptual",
+    "sub_problems": []
+  }
+]
